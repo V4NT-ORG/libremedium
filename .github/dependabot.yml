@@ -4,35 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      day: "monday"
-      time: "04:00"
-    open-pull-requests-limit: 5
-    commit-message:
-      prefix: "build(deps)"
-      prefix-development: "chore(deps)"
-    ignore:
-      # Example: Pin critical dependencies
-      # - dependency-name: "tokio"
-      #   versions: ["1.x"]
-      
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
-      day: "tuesday"
-      time: "04:00"
-    open-pull-requests-limit: 3
-    versioning-strategy: "increase-if-necessary"
-
-  # Docker ecosystem (0.4% - scans FROM instructions)
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
-      day: "wednesday"
-      time: "04:00"
-    open-pull-requests-limit: 2
-    # Target common Dockerfile locations
-    paths:
-      - "Dockerfile"
-      - "docker/**/Dockerfile*"
